@@ -1,0 +1,15 @@
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/FactorialCalc/FactorialCalc/obj/Debug/net6.0/FactorialCalc.csproj.AssemblyReference.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/FactorialCalc/FactorialCalc/obj/Debug/net6.0/FactorialCalc.GeneratedMSBuildEditorConfig.editorconfig
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/FactorialCalc/FactorialCalc/obj/Debug/net6.0/FactorialCalc.AssemblyInfoInputs.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/FactorialCalc/FactorialCalc/obj/Debug/net6.0/FactorialCalc.AssemblyInfo.cs
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/FactorialCalc/FactorialCalc/obj/Debug/net6.0/FactorialCalc.csproj.CoreCompileInputs.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/FactorialCalc/FactorialCalc/bin/Debug/net6.0/FactorialCalc
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/FactorialCalc/FactorialCalc/bin/Debug/net6.0/FactorialCalc.deps.json
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/FactorialCalc/FactorialCalc/bin/Debug/net6.0/FactorialCalc.runtimeconfig.json
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/FactorialCalc/FactorialCalc/bin/Debug/net6.0/FactorialCalc.dll
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/FactorialCalc/FactorialCalc/bin/Debug/net6.0/FactorialCalc.pdb
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/FactorialCalc/FactorialCalc/obj/Debug/net6.0/FactorialCalc.dll
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/FactorialCalc/FactorialCalc/obj/Debug/net6.0/refint/FactorialCalc.dll
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/FactorialCalc/FactorialCalc/obj/Debug/net6.0/FactorialCalc.pdb
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/FactorialCalc/FactorialCalc/obj/Debug/net6.0/FactorialCalc.genruntimeconfig.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/FactorialCalc/FactorialCalc/obj/Debug/net6.0/ref/FactorialCalc.dll

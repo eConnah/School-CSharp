@@ -1,0 +1,15 @@
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PalindromeChecker/PalindromeChecker/bin/Debug/net6.0/PalindromeChecker
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PalindromeChecker/PalindromeChecker/bin/Debug/net6.0/PalindromeChecker.deps.json
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PalindromeChecker/PalindromeChecker/bin/Debug/net6.0/PalindromeChecker.runtimeconfig.json
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PalindromeChecker/PalindromeChecker/bin/Debug/net6.0/PalindromeChecker.dll
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PalindromeChecker/PalindromeChecker/bin/Debug/net6.0/PalindromeChecker.pdb
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PalindromeChecker/PalindromeChecker/obj/Debug/net6.0/PalindromeChecker.csproj.AssemblyReference.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PalindromeChecker/PalindromeChecker/obj/Debug/net6.0/PalindromeChecker.GeneratedMSBuildEditorConfig.editorconfig
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PalindromeChecker/PalindromeChecker/obj/Debug/net6.0/PalindromeChecker.AssemblyInfoInputs.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PalindromeChecker/PalindromeChecker/obj/Debug/net6.0/PalindromeChecker.AssemblyInfo.cs
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PalindromeChecker/PalindromeChecker/obj/Debug/net6.0/PalindromeChecker.csproj.CoreCompileInputs.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PalindromeChecker/PalindromeChecker/obj/Debug/net6.0/PalindromeChecker.dll
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PalindromeChecker/PalindromeChecker/obj/Debug/net6.0/refint/PalindromeChecker.dll
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PalindromeChecker/PalindromeChecker/obj/Debug/net6.0/PalindromeChecker.pdb
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PalindromeChecker/PalindromeChecker/obj/Debug/net6.0/PalindromeChecker.genruntimeconfig.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PalindromeChecker/PalindromeChecker/obj/Debug/net6.0/ref/PalindromeChecker.dll

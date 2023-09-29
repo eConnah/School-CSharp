@@ -1,0 +1,15 @@
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/OddOrEven/OddOrEven/bin/Debug/net6.0/OddOrEven
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/OddOrEven/OddOrEven/bin/Debug/net6.0/OddOrEven.deps.json
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/OddOrEven/OddOrEven/bin/Debug/net6.0/OddOrEven.runtimeconfig.json
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/OddOrEven/OddOrEven/bin/Debug/net6.0/OddOrEven.dll
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/OddOrEven/OddOrEven/bin/Debug/net6.0/OddOrEven.pdb
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/OddOrEven/OddOrEven/obj/Debug/net6.0/OddOrEven.csproj.AssemblyReference.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/OddOrEven/OddOrEven/obj/Debug/net6.0/OddOrEven.GeneratedMSBuildEditorConfig.editorconfig
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/OddOrEven/OddOrEven/obj/Debug/net6.0/OddOrEven.AssemblyInfoInputs.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/OddOrEven/OddOrEven/obj/Debug/net6.0/OddOrEven.AssemblyInfo.cs
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/OddOrEven/OddOrEven/obj/Debug/net6.0/OddOrEven.csproj.CoreCompileInputs.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/OddOrEven/OddOrEven/obj/Debug/net6.0/OddOrEven.dll
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/OddOrEven/OddOrEven/obj/Debug/net6.0/refint/OddOrEven.dll
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/OddOrEven/OddOrEven/obj/Debug/net6.0/OddOrEven.pdb
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/OddOrEven/OddOrEven/obj/Debug/net6.0/OddOrEven.genruntimeconfig.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/OddOrEven/OddOrEven/obj/Debug/net6.0/ref/OddOrEven.dll

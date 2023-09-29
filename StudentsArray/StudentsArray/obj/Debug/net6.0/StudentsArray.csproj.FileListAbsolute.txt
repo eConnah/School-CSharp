@@ -1,0 +1,15 @@
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/StudentsArray/StudentsArray/obj/Debug/net6.0/StudentsArray.csproj.AssemblyReference.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/StudentsArray/StudentsArray/obj/Debug/net6.0/StudentsArray.GeneratedMSBuildEditorConfig.editorconfig
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/StudentsArray/StudentsArray/obj/Debug/net6.0/StudentsArray.AssemblyInfoInputs.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/StudentsArray/StudentsArray/obj/Debug/net6.0/StudentsArray.AssemblyInfo.cs
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/StudentsArray/StudentsArray/obj/Debug/net6.0/StudentsArray.csproj.CoreCompileInputs.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/StudentsArray/StudentsArray/bin/Debug/net6.0/StudentsArray
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/StudentsArray/StudentsArray/bin/Debug/net6.0/StudentsArray.deps.json
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/StudentsArray/StudentsArray/bin/Debug/net6.0/StudentsArray.runtimeconfig.json
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/StudentsArray/StudentsArray/bin/Debug/net6.0/StudentsArray.dll
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/StudentsArray/StudentsArray/bin/Debug/net6.0/StudentsArray.pdb
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/StudentsArray/StudentsArray/obj/Debug/net6.0/StudentsArray.dll
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/StudentsArray/StudentsArray/obj/Debug/net6.0/refint/StudentsArray.dll
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/StudentsArray/StudentsArray/obj/Debug/net6.0/StudentsArray.pdb
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/StudentsArray/StudentsArray/obj/Debug/net6.0/StudentsArray.genruntimeconfig.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/StudentsArray/StudentsArray/obj/Debug/net6.0/ref/StudentsArray.dll

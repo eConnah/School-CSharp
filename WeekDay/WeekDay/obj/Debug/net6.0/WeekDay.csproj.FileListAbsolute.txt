@@ -1,0 +1,15 @@
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/WeekDay/WeekDay/bin/Debug/net6.0/WeekDay
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/WeekDay/WeekDay/bin/Debug/net6.0/WeekDay.deps.json
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/WeekDay/WeekDay/bin/Debug/net6.0/WeekDay.runtimeconfig.json
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/WeekDay/WeekDay/bin/Debug/net6.0/WeekDay.dll
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/WeekDay/WeekDay/bin/Debug/net6.0/WeekDay.pdb
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/WeekDay/WeekDay/obj/Debug/net6.0/WeekDay.csproj.AssemblyReference.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/WeekDay/WeekDay/obj/Debug/net6.0/WeekDay.GeneratedMSBuildEditorConfig.editorconfig
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/WeekDay/WeekDay/obj/Debug/net6.0/WeekDay.AssemblyInfoInputs.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/WeekDay/WeekDay/obj/Debug/net6.0/WeekDay.AssemblyInfo.cs
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/WeekDay/WeekDay/obj/Debug/net6.0/WeekDay.csproj.CoreCompileInputs.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/WeekDay/WeekDay/obj/Debug/net6.0/WeekDay.dll
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/WeekDay/WeekDay/obj/Debug/net6.0/refint/WeekDay.dll
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/WeekDay/WeekDay/obj/Debug/net6.0/WeekDay.pdb
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/WeekDay/WeekDay/obj/Debug/net6.0/WeekDay.genruntimeconfig.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/WeekDay/WeekDay/obj/Debug/net6.0/ref/WeekDay.dll

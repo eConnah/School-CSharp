@@ -1,0 +1,15 @@
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/DatabaseMenu/DatabaseMenu/bin/Debug/net6.0/DatabaseMenu
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/DatabaseMenu/DatabaseMenu/bin/Debug/net6.0/DatabaseMenu.deps.json
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/DatabaseMenu/DatabaseMenu/bin/Debug/net6.0/DatabaseMenu.runtimeconfig.json
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/DatabaseMenu/DatabaseMenu/bin/Debug/net6.0/DatabaseMenu.dll
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/DatabaseMenu/DatabaseMenu/bin/Debug/net6.0/DatabaseMenu.pdb
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/DatabaseMenu/DatabaseMenu/obj/Debug/net6.0/DatabaseMenu.csproj.AssemblyReference.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/DatabaseMenu/DatabaseMenu/obj/Debug/net6.0/DatabaseMenu.GeneratedMSBuildEditorConfig.editorconfig
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/DatabaseMenu/DatabaseMenu/obj/Debug/net6.0/DatabaseMenu.AssemblyInfoInputs.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/DatabaseMenu/DatabaseMenu/obj/Debug/net6.0/DatabaseMenu.AssemblyInfo.cs
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/DatabaseMenu/DatabaseMenu/obj/Debug/net6.0/DatabaseMenu.csproj.CoreCompileInputs.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/DatabaseMenu/DatabaseMenu/obj/Debug/net6.0/DatabaseMenu.dll
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/DatabaseMenu/DatabaseMenu/obj/Debug/net6.0/refint/DatabaseMenu.dll
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/DatabaseMenu/DatabaseMenu/obj/Debug/net6.0/DatabaseMenu.pdb
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/DatabaseMenu/DatabaseMenu/obj/Debug/net6.0/DatabaseMenu.genruntimeconfig.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/DatabaseMenu/DatabaseMenu/obj/Debug/net6.0/ref/DatabaseMenu.dll

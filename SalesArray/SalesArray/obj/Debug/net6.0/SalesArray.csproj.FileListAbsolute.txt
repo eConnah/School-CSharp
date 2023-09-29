@@ -1,0 +1,15 @@
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/SalesArray/SalesArray/bin/Debug/net6.0/SalesArray
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/SalesArray/SalesArray/bin/Debug/net6.0/SalesArray.deps.json
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/SalesArray/SalesArray/bin/Debug/net6.0/SalesArray.runtimeconfig.json
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/SalesArray/SalesArray/bin/Debug/net6.0/SalesArray.dll
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/SalesArray/SalesArray/bin/Debug/net6.0/SalesArray.pdb
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/SalesArray/SalesArray/obj/Debug/net6.0/SalesArray.csproj.AssemblyReference.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/SalesArray/SalesArray/obj/Debug/net6.0/SalesArray.GeneratedMSBuildEditorConfig.editorconfig
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/SalesArray/SalesArray/obj/Debug/net6.0/SalesArray.AssemblyInfoInputs.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/SalesArray/SalesArray/obj/Debug/net6.0/SalesArray.AssemblyInfo.cs
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/SalesArray/SalesArray/obj/Debug/net6.0/SalesArray.csproj.CoreCompileInputs.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/SalesArray/SalesArray/obj/Debug/net6.0/SalesArray.dll
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/SalesArray/SalesArray/obj/Debug/net6.0/refint/SalesArray.dll
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/SalesArray/SalesArray/obj/Debug/net6.0/SalesArray.pdb
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/SalesArray/SalesArray/obj/Debug/net6.0/SalesArray.genruntimeconfig.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/SalesArray/SalesArray/obj/Debug/net6.0/ref/SalesArray.dll

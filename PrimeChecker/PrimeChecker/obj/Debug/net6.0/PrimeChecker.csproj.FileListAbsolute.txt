@@ -1,0 +1,15 @@
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PrimeChecker/PrimeChecker/bin/Debug/net6.0/PrimeChecker
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PrimeChecker/PrimeChecker/bin/Debug/net6.0/PrimeChecker.deps.json
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PrimeChecker/PrimeChecker/bin/Debug/net6.0/PrimeChecker.runtimeconfig.json
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PrimeChecker/PrimeChecker/bin/Debug/net6.0/PrimeChecker.dll
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PrimeChecker/PrimeChecker/bin/Debug/net6.0/PrimeChecker.pdb
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PrimeChecker/PrimeChecker/obj/Debug/net6.0/PrimeChecker.csproj.AssemblyReference.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PrimeChecker/PrimeChecker/obj/Debug/net6.0/PrimeChecker.GeneratedMSBuildEditorConfig.editorconfig
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PrimeChecker/PrimeChecker/obj/Debug/net6.0/PrimeChecker.AssemblyInfoInputs.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PrimeChecker/PrimeChecker/obj/Debug/net6.0/PrimeChecker.AssemblyInfo.cs
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PrimeChecker/PrimeChecker/obj/Debug/net6.0/PrimeChecker.csproj.CoreCompileInputs.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PrimeChecker/PrimeChecker/obj/Debug/net6.0/PrimeChecker.dll
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PrimeChecker/PrimeChecker/obj/Debug/net6.0/refint/PrimeChecker.dll
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PrimeChecker/PrimeChecker/obj/Debug/net6.0/PrimeChecker.pdb
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PrimeChecker/PrimeChecker/obj/Debug/net6.0/PrimeChecker.genruntimeconfig.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/PrimeChecker/PrimeChecker/obj/Debug/net6.0/ref/PrimeChecker.dll

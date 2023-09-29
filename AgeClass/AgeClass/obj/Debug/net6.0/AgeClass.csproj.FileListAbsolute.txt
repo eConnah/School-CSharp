@@ -1,0 +1,15 @@
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/AgeClass/AgeClass/bin/Debug/net6.0/AgeClass
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/AgeClass/AgeClass/bin/Debug/net6.0/AgeClass.deps.json
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/AgeClass/AgeClass/bin/Debug/net6.0/AgeClass.runtimeconfig.json
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/AgeClass/AgeClass/bin/Debug/net6.0/AgeClass.dll
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/AgeClass/AgeClass/bin/Debug/net6.0/AgeClass.pdb
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/AgeClass/AgeClass/obj/Debug/net6.0/AgeClass.csproj.AssemblyReference.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/AgeClass/AgeClass/obj/Debug/net6.0/AgeClass.GeneratedMSBuildEditorConfig.editorconfig
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/AgeClass/AgeClass/obj/Debug/net6.0/AgeClass.AssemblyInfoInputs.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/AgeClass/AgeClass/obj/Debug/net6.0/AgeClass.AssemblyInfo.cs
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/AgeClass/AgeClass/obj/Debug/net6.0/AgeClass.csproj.CoreCompileInputs.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/AgeClass/AgeClass/obj/Debug/net6.0/AgeClass.dll
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/AgeClass/AgeClass/obj/Debug/net6.0/refint/AgeClass.dll
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/AgeClass/AgeClass/obj/Debug/net6.0/AgeClass.pdb
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/AgeClass/AgeClass/obj/Debug/net6.0/AgeClass.genruntimeconfig.cache
+/Users/connor/Library/CloudStorage/GoogleDrive-18alecksc@gmail.com/My Drive/Computer Science/C#/AgeClass/AgeClass/obj/Debug/net6.0/ref/AgeClass.dll

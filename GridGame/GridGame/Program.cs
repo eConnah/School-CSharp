@@ -4,64 +4,132 @@
     {
         //Declare variables
         char[,] gridArray;
+        int oldRow;
         int targetRow;
         int targetColumn;
+        int gridWidth;
+        int gridLength;
+        int x;
+        int yOne;
+        int yTwo;
 
         //Set variables
         gridArray = new char[,] {
-            {' ','1','2','3','4'},
-            {'1','x','x','x','x'},
-            {'2','x','x','x','x'},
-            {'3','x','x','x','x'},
-            {'4','x','x','x','x'},
-            {'5','x','x','x','x'},
-            {'6','x','x','x','x'}
+            {'7','x','x','x','x','x','x','x','x','x','x','x','x','x','x'},
+            {'6','x','x','x','x','x','x','x','x','x','x','x','x','x','x'},
+            {'5','x','x','x','x','x','x','x','x','x','x','x','x','x','x'},
+            {'4','x','x','x','x','x','x','x','x','x','x','x','x','x','x'},
+            {'3','x','x','x','x','x','x','x','x','x','x','x','x','x','x'},
+            {'2','x','x','x','x','x','x','x','x','x','x','x','x','x','x'},
+            {'1','O','x','x','x','x','x','x','x','x','x','x','x','x','x'},
+            {' ','1','2','3','4','5','6','7','8','9','A','B','C','D','E'}
         };
+        gridWidth = gridArray.GetLength(1);
+        gridLength = gridArray.GetLength(0);
+        x = yOne = yTwo = 1;
 
         //Output one
-        Console.WriteLine("Here is the current grid.");
-        for (int i = 0; i < 7; i++)
+        Console.WriteLine("Here is the current grid. You may only move 1 square.");
+        for (int length = 0; length < gridLength; length++)
         {
-            Console.Write($"{gridArray[i,0]} ");
-            Console.Write($"{gridArray[i,1]} ");
-            Console.Write($"{gridArray[i,2]} ");
-            Console.Write($"{gridArray[i,3]} ");
-            Console.WriteLine($"{gridArray[i,4]} ");
+            for (int width = 0; width < gridWidth; width++)
+            {
+                Console.Write($"{gridArray[length, width]} ");
+            }
+            Console.WriteLine();
         }
 
-        //Update grid
-        (targetRow, targetColumn) = Target();
-        gridArray[targetRow, targetColumn] = 'O';
-
-        //Output two
-        for (int i = 0; i < 7; i++)
+        //Loop
+        do
         {
-            Console.Write($"{gridArray[i,0]} ");
-            Console.Write($"{gridArray[i,1]} ");
-            Console.Write($"{gridArray[i,2]} ");
-            Console.Write($"{gridArray[i,3]} ");
-            Console.WriteLine($"{gridArray[i,4]} ");
-        }
+            //Update grid
+            (oldRow, targetRow, targetColumn) = Target(gridWidth, gridLength);
+            if (Math.Pow((oldRow - yOne), 2) == 1 || oldRow - yOne == 0)
+            {
+                if (Math.Pow((targetColumn - x), 2) == 1 || targetColumn - x == 0)
+                {
+                    yOne = AbsoluteRow(yTwo, gridLength);
+                    gridArray[yOne, x] = '.';
+                    x = targetColumn;
+                    yTwo = yOne = oldRow;
+                    gridArray[targetRow, targetColumn] = 'O';
+                }
+            }
+
+            //Output two
+            Console.WriteLine("Here is the current grid. You may only move 1 square.");
+            for (int length = 0; length < gridLength; length++)
+            {
+                for (int width = 0; width < gridWidth; width++)
+                {
+                    Console.Write($"{gridArray[length, width]} ");
+                }
+                Console.WriteLine();
+            }
+        } while (true);
     }
-    private static (int, int) Target()
+    private static (int, int, int) Target(int gridWidth, int gridLength)
     {
         //Declare variables
         int column;
         int row;
+        int trueRow;
+        string columnInputA;
+        char columnInputB;
+
+        //Dictionary for hex
+        Dictionary<char, int> hexCoords = new()
+        {
+            {'A', 10},
+            {'B', 11},
+            {'C', 12},
+            {'D', 13},
+            {'E', 14}
+        };
 
         //Set variables
         Console.Write("Which column would you like to update: ");
-        while (!int.TryParse(Console.ReadLine(), out column) || column > 4 || column < 1)
+        while (!int.TryParse(columnInputA = Console.ReadLine()?.Trim().ToUpper() ?? string.Empty, out column) || column >= gridWidth || column <= 0)
         {
+            columnInputB = Convert.ToChar(columnInputA);
+            if (hexCoords.ContainsKey(columnInputB))
+            {
+                column = hexCoords[columnInputB];
+                break;
+            }
             Console.Write("Please enter a valid input: ");
         }
         Console.Write("Which row would you like to update: ");
-        while (!int.TryParse(Console.ReadLine(), out row) || row > 6 || row < 1) 
+        while (!int.TryParse(Console.ReadLine(), out row) || row >= gridLength || row <= 0)
         {
             Console.Write("Please enter a valid input: ");
         }
 
+        //Convert row
+        trueRow = AbsoluteRow(row, gridLength);
+
         //Output
-        return (row, column);
+        return (row, trueRow, column);
+    }
+    private static int AbsoluteRow(int trueRow, int gridLength)
+    {
+        //Declare variables
+        int[] convert;
+        int rowNum;
+
+        //Set variables
+        convert = new int[gridLength];
+        for (int i = 1; i < gridLength; i++)
+        {
+            convert[i] = i;
+        }
+
+        //Convert row
+        rowNum = Array.IndexOf(convert, trueRow);
+        Array.Reverse(convert);
+        rowNum = convert[trueRow];
+
+        //Output
+        return rowNum;
     }
 }

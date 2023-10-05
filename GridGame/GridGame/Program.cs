@@ -4,31 +4,63 @@
     {
         //Declare variables
         char[,] gridArray;
-        int oldRow;
-        int targetRow;
-        int targetColumn;
         int gridWidth;
         int gridLength;
+        int oldRow;
+        int oldColumn;
         int x;
-        int yOne;
-        int yTwo;
+        int y;
 
         //Set variables
-        gridArray = new char[,] {
-            {'7','x','x','x','x','x','x','x','x','x','x','x','x','x','x'},
-            {'6','x','x','x','x','x','x','x','x','x','x','x','x','x','x'},
-            {'5','x','x','x','x','x','x','x','x','x','x','x','x','x','x'},
-            {'4','x','x','x','x','x','x','x','x','x','x','x','x','x','x'},
-            {'3','x','x','x','x','x','x','x','x','x','x','x','x','x','x'},
-            {'2','x','x','x','x','x','x','x','x','x','x','x','x','x','x'},
-            {'1','O','x','x','x','x','x','x','x','x','x','x','x','x','x'},
-            {' ','1','2','3','4','5','6','7','8','9','A','B','C','D','E'}
-        };
+        gridArray = InitializeGrid();
         gridWidth = gridArray.GetLength(1);
         gridLength = gridArray.GetLength(0);
-        x = yOne = yTwo = 1;
+        oldColumn = x = y = 1;
+        oldRow = AbsoluteRow(1, gridLength);
 
-        //Output one
+        //Output grid
+        PrintGrid(gridArray);
+
+        //Loop
+        while (true)
+        {
+            //Update grid
+            (y, x) = Target(gridWidth, gridLength);
+            if (IsMoveValid(oldRow, y, oldColumn, x))
+            {
+                gridArray[oldRow, oldColumn] = '.';
+                oldColumn = x;
+                oldRow = y;
+                gridArray[y, x] = 'O';
+            }
+
+            //Output grid
+            PrintGrid(gridArray);
+        }
+    }
+
+    private static char[,] InitializeGrid()
+    {
+        return new char[,]
+        {
+            {'7',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},
+            {'6',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},
+            {'5',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},
+            {'4',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},
+            {'3',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},
+            {'2',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},
+            {'1','O',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '},
+            {' ','1','2','3','4','5','6','7','8','9','A','B','C','D','E'}
+        };
+    }
+
+    private static void PrintGrid(char[,] gridArray)
+    {
+        //Declare variables
+        int gridLength = gridArray.GetLength(0);
+        int gridWidth = gridArray.GetLength(1);
+
+        //Output
         Console.WriteLine("Here is the current grid. You may only move 1 square.");
         for (int length = 0; length < gridLength; length++)
         {
@@ -38,47 +70,19 @@
             }
             Console.WriteLine();
         }
-
-        //Loop
-        do
-        {
-            //Update grid
-            (oldRow, targetRow, targetColumn) = Target(gridWidth, gridLength);
-            if (Math.Pow((oldRow - yOne), 2) == 1 || oldRow - yOne == 0)
-            {
-                if (Math.Pow((targetColumn - x), 2) == 1 || targetColumn - x == 0)
-                {
-                    yOne = AbsoluteRow(yTwo, gridLength);
-                    gridArray[yOne, x] = '.';
-                    x = targetColumn;
-                    yTwo = yOne = oldRow;
-                    gridArray[targetRow, targetColumn] = 'O';
-                }
-            }
-
-            //Output two
-            Console.WriteLine("Here is the current grid. You may only move 1 square.");
-            for (int length = 0; length < gridLength; length++)
-            {
-                for (int width = 0; width < gridWidth; width++)
-                {
-                    Console.Write($"{gridArray[length, width]} ");
-                }
-                Console.WriteLine();
-            }
-        } while (true);
     }
-    private static (int, int, int) Target(int gridWidth, int gridLength)
+
+    private static (int, int) Target(int gridWidth, int gridLength)
     {
         //Declare variables
         int column;
         int row;
-        int trueRow;
         string columnInputA;
         char columnInputB;
+        Dictionary<char, int> hexCoords;
 
         //Dictionary for hex
-        Dictionary<char, int> hexCoords = new()
+        hexCoords = new()
         {
             {'A', 10},
             {'B', 11},
@@ -106,11 +110,12 @@
         }
 
         //Convert row
-        trueRow = AbsoluteRow(row, gridLength);
+        row = AbsoluteRow(row, gridLength);
 
         //Output
-        return (row, trueRow, column);
+        return (row, column);
     }
+
     private static int AbsoluteRow(int trueRow, int gridLength)
     {
         //Declare variables
@@ -131,5 +136,17 @@
 
         //Output
         return rowNum;
+    }
+
+    private static bool IsMoveValid(int oldRow, int y, int oldColumn, int x)
+    {
+        if ((Math.Pow((oldRow - y), 2) == 1 || oldRow - y == 0) && (Math.Pow((oldColumn - x), 2) == 1 || oldColumn - x == 0))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

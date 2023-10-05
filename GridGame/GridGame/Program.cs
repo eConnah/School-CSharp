@@ -29,7 +29,7 @@
         x = yOne = yTwo = 1;
 
         //Output one
-        Console.WriteLine("Here is the current grid. Use a distance of 1.");
+        Console.WriteLine("Here is the current grid. You may only move 1 square.");
         for (int length = 0; length < gridLength; length++)
         {
             for (int width = 0; width < gridWidth; width++)
@@ -44,24 +44,20 @@
         {
             //Update grid
             (oldRow, targetRow, targetColumn) = Target(gridWidth, gridLength);
-            if (Math.Pow((oldRow - yOne), 2) == 1 || Math.Pow((oldRow - yOne), 2) == 0)
+            if (Math.Pow((oldRow - yOne), 2) == 1 || oldRow - yOne == 0)
             {
-                yOne = oldRow;
-                if (Math.Pow((targetColumn - x), 2) == 1 || Math.Pow((targetColumn - x), 2) == 0)
+                if (Math.Pow((targetColumn - x), 2) == 1 || targetColumn - x == 0)
                 {
                     yOne = AbsoluteRow(yTwo, gridLength);
-                    gridArray[yOne, x] = 'x';
+                    gridArray[yOne, x] = '.';
                     x = targetColumn;
+                    yTwo = yOne = oldRow;
                     gridArray[targetRow, targetColumn] = 'O';
-                }
-                else
-                {
-                    yOne = yTwo;
                 }
             }
 
             //Output two
-            Console.WriteLine("Here is the current grid. Use a distance of 1.");
+            Console.WriteLine("Here is the current grid. You may only move 1 square.");
             for (int length = 0; length < gridLength; length++)
             {
                 for (int width = 0; width < gridWidth; width++)

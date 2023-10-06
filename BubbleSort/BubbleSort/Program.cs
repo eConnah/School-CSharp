@@ -13,7 +13,7 @@
         Console.WriteLine("Here is the array before sorting: ");
         foreach (int number in numbers)
         {
-            Console.Write($"{number}, ");
+            Console.Write($"{number} ");
         }
         Console.WriteLine();
         Console.WriteLine();
@@ -24,7 +24,7 @@
         //Output
         foreach (int sortedNumber in sortedNumbers)
         {
-            Console.Write($"{sortedNumber}, ");
+            Console.Write($"{sortedNumber} ");
         }
         Console.WriteLine();
     }

@@ -25,6 +25,7 @@
             if (guessed)
             {
                 Console.WriteLine("Congratulations, you somehow managed.");
+                Console.WriteLine($"The word was: {new string(choiceWord)}");
                 break;
             }
         }
@@ -33,6 +34,7 @@
         if (!guessed)
         {
             Console.WriteLine("You failed miserably.");
+            Console.WriteLine($"The word was: {new string(choiceWord)}");
         }
     }
 

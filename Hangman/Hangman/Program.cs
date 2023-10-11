@@ -8,6 +8,7 @@
         char[] choiceWord;
         char[] currentWord;
         char guessedLetter;
+        bool correctLetter;
         bool guessed = false;
 
         //Set variables
@@ -19,8 +20,13 @@
         {
             Console.WriteLine($"You have {MaxGuesses - i} guesses left.");
             guessedLetter = UserInput(currentWord);
-            UpdateCurrentWord(choiceWord, guessedLetter, currentWord);
+            correctLetter = UpdateCurrentWord(choiceWord, guessedLetter, currentWord);
             guessed = AreWordsEqual(currentWord, choiceWord);
+
+            if (correctLetter)
+            {
+                i--;
+            }
 
             if (guessed)
             {
@@ -77,16 +83,23 @@
         return userInput;
     }
 
-    private static void UpdateCurrentWord(char[] choiceWord, char guessedLetter, char[] currentWord)
+    private static bool UpdateCurrentWord(char[] choiceWord, char guessedLetter, char[] currentWord)
     {
+        //Declare and initialize variables
+        bool correctLetter = false;
+
         //Loop
         for (int i = 0; i < choiceWord.Length; i++)
         {
             if (guessedLetter == choiceWord[i])
             {
                 currentWord[i] = guessedLetter;
+                correctLetter = true;
             }
         }
+
+        //Return
+        return correctLetter;
     }
 
     private static bool AreWordsEqual(char[] currentWord, char[] choiceWord)

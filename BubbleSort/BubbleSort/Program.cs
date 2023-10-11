@@ -22,6 +22,7 @@
         sortedNumbers = Sorted(numbers);
 
         //Output
+        Console.WriteLine("Here is the array after sorting: ");
         foreach (int sortedNumber in sortedNumbers)
         {
             Console.Write($"{sortedNumber} ");

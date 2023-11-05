@@ -34,12 +34,14 @@
 
         //Convert to integer
         finalResult = ArrayToInteger(decimalNumerals);
+        if (FiveCheck(finalResult))
+        {
+            Console.WriteLine("Invalid roman numeral was entered, please run the code again.");
+            return;
+        }
 
         //Output
-        foreach (int item in finalResult)
-        {
-            printedResult += item;
-        }
+        printedResult = finalResult.Sum();
         Console.WriteLine($"The roman numeral '{userInput}' equals {printedResult}");
     }
 
@@ -65,32 +67,19 @@
             if (array[i] < array[i + 1])
             {
                 subArray[i] = array[i + 1] - array[i];
+                i++;
             }
             else
             {
-                if (array[i] == array[i + 1])
-                {
-                    if (i + 2 < array.Length && array[i + 1] == array[i + 2])
-                    {
-                        subArray[i] = array[i + 2] + array[i + 1] + array[i];
-                        i += 2;
-                    }
-                    else
-                    {
-                        subArray[i] = array[i + 1] + array[i];
-                        i++;
-                    }
-                }
-                else
-                {
-                    if (array[i] > array[i + 1])
-                    {
-                        subArray[i] = array[i];
-                        subArray[i + 1] = array[i + 1];
-                    }
-                }
+                subArray[i] = array[i];
             }
         }
+        subArray[^1] = array[^1];
         return subArray;
+    }
+
+    private static bool FiveCheck(int[] array)
+    {
+        return array.Count(x => x == 5) >= 2;
     }
 }

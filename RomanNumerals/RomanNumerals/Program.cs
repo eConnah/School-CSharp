@@ -14,7 +14,6 @@
         userInput = Console.ReadLine()?.Trim().ToUpper() ?? string.Empty;
         romanNumerals = userInput.ToCharArray();
         decimalNumerals = new int[romanNumerals.Length];
-        printedResult = 0;
 
         //Convert to decimal
         for (int i = 0; i < romanNumerals.Length; i++)
@@ -30,6 +29,11 @@
                 Console.WriteLine("Invalid roman numeral was entered, please run the code again.");
                 return;
             }
+        }
+        if (InvalidCheck(decimalNumerals))
+        {
+            Console.WriteLine("Invalid roman numeral was entered, please run the code again.");
+            return;
         }
 
         //Convert to integer
@@ -81,5 +85,21 @@
     private static bool FiveCheck(int[] array)
     {
         return array.Count(x => x == 5) >= 2;
+    }
+
+    private static bool InvalidCheck(int[] array)
+    {
+        for (int i = 0; i < array.Length - 1; i++)
+        {
+            if (array[i] < array[i + 1] && i > 0)
+            {
+                if (array[i - 1] < array[i + 1])
+                {
+                    return true;
+                }
+            }
+
+        }
+        return false;
     }
 }

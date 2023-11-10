@@ -6,8 +6,7 @@
         string userInput;
         char[] romanNumerals;
         int[] decimalNumerals;
-        int[] finalResult;
-        int printedResult;
+        int finalResult;
 
         //Loop with checks
         do
@@ -29,8 +28,7 @@
         finalResult = ArrayToInteger(decimalNumerals);
 
         //Output
-        printedResult = finalResult.Sum();
-        Console.WriteLine($"The roman numeral '{userInput}' equals {printedResult}");
+        Console.WriteLine($"The roman numeral '{userInput}' equals {finalResult}.");
     }
 
     private static (int, int) RepeatRule(int i)
@@ -58,26 +56,26 @@
         };
     }
 
-    private static int[] ArrayToInteger(int[] array)
+    private static int ArrayToInteger(int[] array)
     {
         //Declare and intilise variables
-        int[] subArray = new int[array.Length];
+        int total = 0;
 
         //Convert
         for (int i = 0; i < array.Length - 1; i++)
         {
             if (array[i] < array[i + 1])
             {
-                subArray[i] = array[i + 1] - array[i];
+                total += array[i + 1] - array[i];
                 i++;
             }
             else
             {
-                subArray[i] = array[i];
+                total += array[i];
             }
         }
-        subArray[^1] = array[^1];
-        return subArray;
+        total += array[^1];
+        return total;
     }
 
     private static bool ValidCheck(int[] array)

@@ -9,44 +9,42 @@
         int[] finalResult;
         int printedResult;
 
-        //Set variables
-        Console.Write("Please enter your roman numeral: ");
-        userInput = Console.ReadLine()?.Trim().ToUpper() ?? string.Empty;
-        romanNumerals = userInput.ToCharArray();
-        decimalNumerals = new int[romanNumerals.Length];
-
-        //Convert to decimal
-        for (int i = 0; i < romanNumerals.Length; i++)
+        //Loop with checks
+        do
         {
-            decimalNumerals[i] = RomanToDecimal(romanNumerals[i]);
-        }
+            //Set variables
+            Console.Write("Please enter your roman numeral: ");
+            userInput = Console.ReadLine()?.Trim().ToUpper() ?? string.Empty;
+            romanNumerals = userInput.ToCharArray();
+            decimalNumerals = new int[romanNumerals.Length];
 
-        //Check
-        foreach (int item in decimalNumerals)
-        {
-            if (item == -1)
+            //Convert to decimal
+            for (int i = 0; i < romanNumerals.Length; i++)
             {
-                Console.WriteLine("Invalid roman numeral was entered, please run the code again.");
-                return;
+                decimalNumerals[i] = RomanToDecimal(romanNumerals[i]);
             }
-        }
-        if (InvalidCheck(decimalNumerals))
-        {
-            Console.WriteLine("Invalid roman numeral was entered, please run the code again.");
-            return;
-        }
+        } while (ValidCheck(decimalNumerals) || RepeatCheck(decimalNumerals) || OrderCheck(decimalNumerals));
 
         //Convert to integer
         finalResult = ArrayToInteger(decimalNumerals);
-        if (FiveCheck(finalResult))
-        {
-            Console.WriteLine("Invalid roman numeral was entered, please run the code again.");
-            return;
-        }
 
         //Output
         printedResult = finalResult.Sum();
         Console.WriteLine($"The roman numeral '{userInput}' equals {printedResult}");
+    }
+
+    private static (int, int) RepeatRule(int i)
+    {
+        //Declare and intilise variables
+        int[,] rules =
+        {
+            { 1, 3 },
+            { 5, 1 },
+            { 10, 3 }
+        };
+
+        //Return
+        return (rules[i, 0], rules[i, 1]);
     }
 
     private static int RomanToDecimal(char romanNumeral)
@@ -82,12 +80,39 @@
         return subArray;
     }
 
-    private static bool FiveCheck(int[] array)
+    private static bool ValidCheck(int[] array)
     {
-        return array.Count(x => x == 5) >= 2;
+        foreach (int item in array)
+        {
+            if (item == -1)
+            {
+                Console.WriteLine("Roman numerals can only contain I, V, X.");
+                return true;
+            }
+        }
+        return false;
     }
 
-    private static bool InvalidCheck(int[] array)
+    private static bool RepeatCheck(int[] array)
+    {
+        //Declare variables
+        int number;
+        int count;
+
+        //Loop
+        for (int i = 0; i < 3; i++)
+        {
+            (number, count) = RepeatRule(i);
+            if (array.Count(x => x == number) > count)
+            {
+                Console.WriteLine("Certain roman numerals can only be repeated a set amount.");
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static bool OrderCheck(int[] array)
     {
         for (int i = 0; i < array.Length - 1; i++)
         {
@@ -95,6 +120,7 @@
             {
                 if (array[i - 1] < array[i + 1])
                 {
+                    Console.WriteLine("Roman numerals must be in the correct order.");
                     return true;
                 }
             }

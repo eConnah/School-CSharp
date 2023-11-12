@@ -11,11 +11,20 @@
         //Loop with checks
         do
         {
+        LoopStart:
             //Set variables
             Console.Write("Please enter your roman numeral: ");
             userInput = Console.ReadLine()?.Trim().ToUpper() ?? string.Empty;
             romanNumerals = userInput.ToCharArray();
             decimalNumerals = new int[romanNumerals.Length];
+
+            //Quick check
+            if (string.IsNullOrEmpty(userInput))
+            {
+                Console.Clear();
+                Console.WriteLine("Null inputs not accepted.");
+                goto LoopStart;
+            }
 
             //Convert to decimal
             for (int i = 0; i < romanNumerals.Length; i++)
@@ -84,6 +93,7 @@
         {
             if (item == -1)
             {
+                Console.Clear();
                 Console.WriteLine("Roman numerals can only contain I, V, X.");
                 return true;
             }
@@ -103,7 +113,8 @@
             (number, count) = RepeatRule(i);
             if (array.Count(x => x == number) > count)
             {
-                Console.WriteLine("Certain roman numerals can only be repeated a set amount.");
+                Console.Clear();
+                Console.WriteLine("Certain roman numerals can only be repeated a set amount of times.");
                 return true;
             }
         }
@@ -118,6 +129,7 @@
             {
                 if (array[i - 1] < array[i + 1])
                 {
+                    Console.Clear();
                     Console.WriteLine("Roman numerals must be in the correct order.");
                     return true;
                 }

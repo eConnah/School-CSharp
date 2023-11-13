@@ -74,21 +74,28 @@ internal class Program
     {
         //Declare and intilise variables
         int total = 0;
+        bool subtracted = false;
 
-        //Convert
+        //Calculate
         for (int i = 0; i < array.Length - 1; i++)
         {
             if (array[i] < array[i + 1])
             {
                 total += array[i + 1] - array[i];
                 i++;
+                subtracted = true;
             }
             else
             {
                 total += array[i];
             }
         }
-        total += array[^1];
+        if (!subtracted)
+        {
+            total += array[^1];
+        }
+
+        //Return
         return total;
     }
 
@@ -99,7 +106,7 @@ internal class Program
             if (item == -1)
             {
                 Console.Clear();
-                Console.WriteLine("Roman numerals can only contain I, V, X.");
+                Console.WriteLine("Roman numerals can only contain: I, V or X.");
                 return true;
             }
         }

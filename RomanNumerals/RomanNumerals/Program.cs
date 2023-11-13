@@ -136,6 +136,13 @@ internal class Program
                 Console.WriteLine("Roman numerals must be in the correct order.");
                 return true;
             }
+            if (i > 0 && array[i] < array[i + 1] && array[i - 1] <= array[i])
+            {
+
+                Console.Clear();
+                Console.WriteLine("Roman numerals must be in the correct order.");
+                return true;
+            }
         }
         return false;
     }

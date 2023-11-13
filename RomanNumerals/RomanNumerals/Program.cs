@@ -1,7 +1,12 @@
-﻿internal class Program
+﻿using System.Net;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
+        //Clear
+        Console.Clear();
+
         //Declare variables
         string userInput;
         char[] romanNumerals;
@@ -125,16 +130,12 @@
     {
         for (int i = 0; i < array.Length - 1; i++)
         {
-            if (array[i] < array[i + 1] && i > 0)
+            if (i + 2 < array.Length && array[i] < array[i + 1] && array[i] <= array[i + 2])
             {
-                if (array[i - 1] < array[i + 1])
-                {
-                    Console.Clear();
-                    Console.WriteLine("Roman numerals must be in the correct order.");
-                    return true;
-                }
+                Console.Clear();
+                Console.WriteLine("Roman numerals must be in the correct order.");
+                return true;
             }
-
         }
         return false;
     }

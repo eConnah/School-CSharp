@@ -1,6 +1,4 @@
-﻿using System.Net;
-
-internal class Program
+﻿internal class Program
 {
     private static void Main(string[] args)
     {
@@ -8,7 +6,7 @@ internal class Program
         Console.Clear();
 
         //Declare variables
-        string userInput;
+        string romanNumeralInput;
         char[] romanNumerals;
         int[] decimalNumerals;
         int finalResult;
@@ -16,20 +14,21 @@ internal class Program
         //Loop with checks
         do
         {
-        LoopStart:
-            //Set variables
-            Console.Write("Please enter your roman numeral: ");
-            userInput = Console.ReadLine()?.Trim().ToUpper() ?? string.Empty;
-            romanNumerals = userInput.ToCharArray();
-            decimalNumerals = new int[romanNumerals.Length];
-
-            //Quick check
-            if (string.IsNullOrEmpty(userInput))
+            do
             {
-                Console.Clear();
-                Console.WriteLine("Null inputs not accepted.");
-                goto LoopStart;
-            }
+                //Set variables
+                Console.Write("Please enter your roman numeral: ");
+                romanNumeralInput = Console.ReadLine()?.Trim().ToUpper() ?? string.Empty;
+                romanNumerals = romanNumeralInput.ToCharArray();
+                decimalNumerals = new int[romanNumerals.Length];
+
+                //Quick check
+                if (string.IsNullOrEmpty(romanNumeralInput))
+                {
+                    Console.Clear();
+                    Console.WriteLine("Null inputs not accepted.");
+                }
+            } while (string.IsNullOrEmpty(romanNumeralInput));
 
             //Convert to decimal
             for (int i = 0; i < romanNumerals.Length; i++)
@@ -42,7 +41,7 @@ internal class Program
         finalResult = ArrayToInteger(decimalNumerals);
 
         //Output
-        Console.WriteLine($"The roman numeral '{userInput}' equals {finalResult}.");
+        Console.WriteLine($"The roman numeral '{romanNumeralInput}' equals {finalResult}.");
     }
 
     private static (int, int) RepeatRule(int i)
@@ -79,7 +78,7 @@ internal class Program
         //Calculate
         for (int i = 0; i < array.Length - 1; i++)
         {
-            if (array[i] < array[i + 1])
+            if (array[i] < array[i + 1] && array[i] == 1)
             {
                 total += array[i + 1] - array[i];
                 i++;
@@ -148,6 +147,12 @@ internal class Program
 
                 Console.Clear();
                 Console.WriteLine("Roman numerals must be in the correct order.");
+                return true;
+            }
+            if (array[i] < array[i + 1] && array[i + 1] != 1)
+            {
+                Console.Clear();
+                Console.WriteLine("Only I can be before V or X.");
                 return true;
             }
         }

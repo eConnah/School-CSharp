@@ -149,7 +149,7 @@
                 Console.WriteLine("Roman numerals must be in the correct order.");
                 return true;
             }
-            if (array[i] < array[i + 1] && array[i + 1] != 1)
+            if (array[i] < array[i + 1] && array[i] != 1)
             {
                 Console.Clear();
                 Console.WriteLine("Only I can be before V or X.");

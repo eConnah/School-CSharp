@@ -19,7 +19,7 @@
         Console.WriteLine();
 
         //Sort
-        sortedNumbers = Sorted(numbers);
+        sortedNumbers = SortedNumbers(numbers);
 
         //Output
         Console.WriteLine("Here is the array after sorting: ");
@@ -30,11 +30,44 @@
         Console.WriteLine();
     }
 
-    private static int[] Sorted(int[] numbers)
+    private static int[] SortedNumbers(int[] numbers)
     {
         //Declare variables
-        int tempNumOne;
-        int tempNumTwo;
+        int tempNumber;
+        int sorted;
+
+        //Set variable
+        sorted = -1;
+
+        //Loop
+        while (sorted != 0)
+        {
+            sorted = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+
+                if (i < numbers.Length - 1)
+                {
+                    if (numbers[i] > numbers[i + 1])
+                    {
+                        tempNumber = numbers[i];
+                        numbers[i] = numbers[i + 1];
+                        numbers[i + 1] = tempNumber;
+                        sorted++;
+                    }
+                }
+            }
+        }
+
+        //Output
+        return numbers;
+    }
+
+    private static char[] SortedCharacters(char[] numbers)
+    {
+        //Declare variables
+        char tempNumOne;
+        char tempNumTwo;
         int sorted;
 
         //Set variable
@@ -60,7 +93,6 @@
                 }
             }
         }
-
 
         //Output
         return numbers;

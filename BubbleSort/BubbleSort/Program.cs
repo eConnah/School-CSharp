@@ -2,99 +2,103 @@
 {
     private static void Main(string[] args)
     {
-        //Declare variables
-        int[] numbers;
-        int[] sortedNumbers;
+        //Declare and initilise variables
+        string userInput;
+        List<string> userInputs = new();
+        List<string> sortedInput = new();
 
         //Set variables
-        numbers = new int[] { 19, 5, 0, -1, 10, -5 };
+        while (true)
+        {
+            Console.Clear();
+            Console.WriteLine("Please enter your item, or type 'qq' to quit:");
+            userInput = Console.ReadLine()?.Trim() ?? "qq";
+            if (userInput == "qq")
+            {
+                break;
+            }
+            userInputs.Add(userInput.ToLower());
+        }
 
         //Output
+        Console.Clear();
         Console.WriteLine("Here is the array before sorting: ");
-        foreach (int number in numbers)
-        {
-            Console.Write($"{number} ");
-        }
+        userInputs.ForEach(Console.Write);
         Console.WriteLine();
         Console.WriteLine();
 
         //Sort
-        sortedNumbers = SortedNumbers(numbers);
+        if (userInputs.All(item => int.TryParse(item, out _)))
+        {
+            sortedInput = SortedNumbers(userInputs.Select(int.Parse).ToArray()).ToList();
+        }
+        else
+        {
+            sortedInput = SortedStrings(userInputs.ToArray()).ToList();
+        }
 
         //Output
         Console.WriteLine("Here is the array after sorting: ");
-        foreach (int sortedNumber in sortedNumbers)
-        {
-            Console.Write($"{sortedNumber} ");
-        }
+        sortedInput.ForEach(Console.Write);
         Console.WriteLine();
     }
 
-    private static int[] SortedNumbers(int[] numbers)
+    private static string[] SortedNumbers(int[] numbers)
     {
         //Declare variables
-        int tempNumber;
-        int sorted;
+        bool hasArranged;
+        string[] orderedNumbers = new string[numbers.Length];
 
         //Set variable
-        sorted = -1;
+        hasArranged = true;
 
         //Loop
-        while (sorted != 0)
+        while (hasArranged)
         {
-            sorted = 0;
-            for (int i = 0; i < numbers.Length; i++)
+            hasArranged = false;
+            for (int i = 0; i < numbers.Length - 1; i++)
             {
-
-                if (i < numbers.Length - 1)
+                if (numbers[i] > numbers[i + 1])
                 {
-                    if (numbers[i] > numbers[i + 1])
-                    {
-                        tempNumber = numbers[i];
-                        numbers[i] = numbers[i + 1];
-                        numbers[i + 1] = tempNumber;
-                        sorted++;
-                    }
+                    (numbers[i], numbers[i + 1]) = (numbers[i + 1], numbers[i]);
+                    hasArranged = true;
                 }
             }
         }
 
+        //Convert
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            orderedNumbers[i] = numbers[i].ToString();
+        }
+
         //Output
-        return numbers;
+        return orderedNumbers;
     }
 
-    private static char[] SortedCharacters(char[] numbers)
+    private static string[] SortedStrings(string[] strings)
     {
         //Declare variables
-        char tempNumOne;
-        char tempNumTwo;
-        int sorted;
+        bool hasArranged;
 
         //Set variable
-        sorted = -1;
+        hasArranged = true;
 
         //Loop
-        while (sorted != 0)
+        while (hasArranged)
         {
-            sorted = 0;
-            for (int i = 0; i < numbers.Length; i++)
+            hasArranged = false;
+            for (int i = 0; i < strings.Length - 1; i++)
             {
-
-                if (i < numbers.Length - 1)
+                if (strings[i].CompareTo(strings[i + 1]) > 0)
                 {
-                    if (numbers[i] > numbers[i + 1])
-                    {
-                        tempNumOne = numbers[i];
-                        tempNumTwo = numbers[i + 1];
-                        numbers[i] = tempNumTwo;
-                        numbers[i + 1] = tempNumOne;
-                        sorted++;
-                    }
+                    (strings[i], strings[i + 1]) = (strings[i + 1], strings[i]);
+                    hasArranged = true;
                 }
             }
         }
 
         //Output
-        return numbers;
+        return strings;
     }
 }

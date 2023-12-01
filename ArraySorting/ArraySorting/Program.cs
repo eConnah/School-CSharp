@@ -4,29 +4,29 @@
     {
         //Declare variables
         int arrayLength;
-        int[] inputArray;
+        int[] intArray;
 
         //Set variables
         do
         {
             arrayLength = InputValidator("Please enter the length of the array you would like (must be above 0): ");
         } while (arrayLength < 1);
-        inputArray = new int[arrayLength];
+        intArray = new int[arrayLength];
         for (int i = 0; i < arrayLength; i++)
         {
-            inputArray[i] = InputValidator($"Enter number {i + 1}: ");
+            intArray[i] = InputValidator($"Enter number {i + 1}: ");
         }
 
         //Print
         Console.Clear();
         Console.Write($"The unsorted array is: ");
-        foreach (int item in inputArray)
+        foreach (int item in intArray)
         {
             Console.Write($"{item} ");
         }
         Console.WriteLine();
         Console.Write($"The sorted array is: ");
-        foreach (int item in BubbleSort(inputArray))
+        foreach (int item in BubbleSort(intArray))
         {
             Console.Write($"{item} ");
         }
@@ -54,12 +54,13 @@
 
     private static int[] BubbleSort(int[] inputArray)
     {
-        //Declare and initilise variables
-        bool passed = false;
+        //Declare variables
+        bool passed;
 
         //Sort
         do
         {
+            passed = false;
             for (int i = 0; i < inputArray.Length - 1; i++)
             {
                 if (inputArray[i] > inputArray[i + 1])

@@ -66,7 +66,6 @@
                 if (inputArray[i] > inputArray[i + 1])
                 {
                     (inputArray[i], inputArray[i + 1]) = (inputArray[i + 1], inputArray[i]);
-                    i++;
                     passed = true;
                 }
             }

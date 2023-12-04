@@ -7,12 +7,25 @@
         int columns;
         int[,] matrixOne;
         int[,] matrixTwo;
+        int[,] answerMatrix;
 
         //Set variables
         (rows, columns) = MatrixDimensions(1, 1);
-        matrixOne = FillMatrix(rows, columns);
+        matrixOne = FillMatrix(1, rows, columns);
         (rows, columns) = MatrixDimensions(2, columns);
-        matrixTwo = FillMatrix(rows, columns);
+        matrixTwo = FillMatrix(2, rows, columns);
+
+        //Multiply and output
+        Console.Clear();
+        answerMatrix = MatrixMultiplier(matrixOne, matrixTwo);
+        for (int i = 0; i < answerMatrix.GetLength(0); i++)
+        {
+            Console.WriteLine();
+            for (int j = 0; j < answerMatrix.GetLength(1); j++)
+            {
+                Console.Write($"{answerMatrix[i, j]} ");
+            }
+        }
     }
 
     private static int InputValidator(string prompt)
@@ -73,21 +86,42 @@
         return (rows, columns);
     }
 
-    private static int[,] FillMatrix(int rows, int columns)
+    private static int[,] FillMatrix(int matrixNumber, int rows, int columns)
     {
         //Declare and initialise variables
-        int[,] matrix = new int[columns, rows];
+        int[,] matrix = new int[rows, columns];
 
         //Set variables
         for (int i = 0; i < rows; i++)
         {
             for (int j = 0; j < columns; j++)
             {
-                matrix[j, i] = InputValidator($"Please enter the value for row {i + 1}, column {j + 1}: ");
+                matrix[i, j] = InputValidator($"Please enter the value for row {i + 1}, column {j + 1} of matrix {matrixNumber}: ");
             }
         }
 
         //Return
         return matrix;
+    }
+
+    private static int[,] MatrixMultiplier(int[,] matrixOne, int[,] matrixTwo)
+    {
+        //Declare and initialize variables
+        int[,] answerMatrix = new int[matrixOne.GetLength(0), matrixTwo.GetLength(1)];
+
+        //Multiply
+        for (int i = 0; i < matrixOne.GetLength(0); i++)
+        {
+            for (int j = 0; j < matrixTwo.GetLength(1); j++)
+            {
+                for (int k = 0; k < matrixOne.GetLength(1); k++)
+                {
+                    answerMatrix[i, j] += matrixOne[i, k] * matrixTwo[k, j];
+                }
+            }
+        }
+
+        //Return
+        return answerMatrix;
     }
 }

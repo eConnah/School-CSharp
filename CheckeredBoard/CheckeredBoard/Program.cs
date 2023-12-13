@@ -13,44 +13,64 @@
         width = InputValidator("Please enter the width of the board: ");
         board = new string[length, width];
 
-        //Print board
+        //Fill board
         for (int i = 0; i < length; i++)
         {
             for (int j = 0; j < width; j++)
             {
                 if (printWhite)
                 {
-                    Console.Write("\u2588");
-                    Console.Write("\u2588");
-                    Console.Write("\u2588");
+                    board[i, j] = "\u2588\u2588\u2588";
                     printWhite = false;
                 }
                 else
                 {
-                    Console.Write("   ");
+                    board[i, j] = "   ";
                     printWhite = true;
                 }
             }
+            if (width % 2 == 0)
+            {
+                printWhite = !printWhite;
+            }
+        }
+
+        //Print
+        Console.Clear();
+        for (int i = 0; i < length; i++)
+        {
+            for (int j = 0; j < width; j++)
+            {
+                Console.Write(board[i, j]);
+            }
             Console.WriteLine();
-            printWhite = !printWhite;
         }
     }
 
     private static int InputValidator(string prompt)
     {
         Console.Clear();
-        do
+        while (true)
         {
             Console.Write(prompt);
             if (int.TryParse(Console.ReadLine(), out int number))
             {
-                return number;
+                if (number < 1)
+                {
+                    Console.Clear();
+                    Console.WriteLine("The number must be greater than 0.");
+                }
+                else
+                {
+                    return number;
+                }
+
             }
             else
             {
                 Console.Clear();
                 Console.WriteLine("An invalid input has been entered.");
             }
-        } while (true);
+        }
     }
 }

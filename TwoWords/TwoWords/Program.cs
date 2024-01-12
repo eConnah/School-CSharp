@@ -2,16 +2,45 @@
 {
     private static void Main(string[] args)
     {
-        //Declare variables
+        //Declare and initialise variables
         string inputOne;
         string inputTwo;
-        
+        List<char> container = new();
+        bool isPossible = true;
+
 
         //Set variables
         inputOne = AcceptInput("Please enter your first word: ");
         inputTwo = AcceptInput("Please enter your second word: ");
+        Console.Clear();
 
-        inputTwo.ToList
+        //Check
+        foreach (char item in inputTwo)
+        {
+            container.Add(item);
+        }
+        foreach (char item in inputOne)
+        {
+            if (!container.Contains(item))
+            {
+                isPossible = false;
+                break;
+            }
+            else
+            {
+                container.Remove(item);
+            }
+        }
+
+        //Output
+        if (isPossible)
+        {
+            Console.WriteLine("The first word can be made from the second word.");
+        }
+        else
+        {
+            Console.WriteLine("The first word cannot be made from the second word.");
+        }
     }
 
     private static string AcceptInput(string prompt)
@@ -24,7 +53,7 @@
         while (true)
         {
             Console.Write(prompt);
-            userInput = Console.ReadLine()?.Trim() ?? string.Empty;
+            userInput = Console.ReadLine()?.Trim().ToLower() ?? string.Empty;
             if (!string.IsNullOrEmpty(userInput))
             {
                 return userInput;

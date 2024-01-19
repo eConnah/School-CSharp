@@ -36,6 +36,10 @@
         {
             Console.WriteLine("This string with brackets is invalid.");
         }
+        else if (bracketCount > 0)
+        {
+            Console.WriteLine("This string with brackets is invalid.");
+        }
         else
         {
             Console.WriteLine("This string with brackets is valid.");

@@ -7,6 +7,7 @@
         List<char> output = new();
 
         //Set variables
+        Console.Clear();
         Console.Write("Please enter your binary input: ");
         binaryInput = Console.ReadLine()?.Trim() ?? string.Empty;
         for (int i = 0; i < binaryInput.Length; i += 4)

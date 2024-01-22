@@ -14,11 +14,38 @@
             int substringLength = Math.Min(4, binaryInput.Length - i);
             output.Add(ToHex(binaryInput.Substring(i, substringLength)));
         }
+
+        //Output
+        Console.Write("The hex value is: ");
+        Console.WriteLine(string.Join("", output));
     }
 
     private static char ToHex(string nibble)
     {
+        //Declare and initialise variables
+        int decValue = 0;
+        int power = 0;
 
-        return;
+        //Convert to decimal
+        for (int i = nibble.Length - 1; i >= 0; i--)
+        {
+            if (nibble[i] == '1')
+            {
+                decValue += (int)Math.Pow(2, power);
+            }
+            power++;
+        }
+
+        //Return hex
+        return decValue switch
+        {
+            15 => 'F',
+            14 => 'E',
+            13 => 'D',
+            12 => 'C',
+            11 => 'B',
+            10 => 'A',
+            _ => (char)(decValue + '0'),
+        };
     }
 }

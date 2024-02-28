@@ -1,0 +1,61 @@
+﻿using System.Data;
+
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        //Declare Variables
+        string treeInput;
+        string childrenInput;
+        string[] binaryTree;
+        string[] children;
+        List<int> childrenElements = new();
+
+        //Set variables
+        Console.Write("Please enter your binary tree: ");
+        treeInput = Console.ReadLine()?.Trim() ?? string.Empty;
+        Console.Write("Please enter your children: ");
+        childrenInput = Console.ReadLine()?.Trim() ?? string.Empty;
+        binaryTree = treeInput.Split(' ');
+        children = childrenInput.Split(' ');
+
+//Find Index
+        foreach (string item in children)
+        {
+            childrenElements.Add(Array.IndexOf(binaryTree, item));
+        }
+
+        //
+    }
+
+    private static int ElementNum(int row, int column)
+    {
+        int element = 0;
+
+        for (int i = 1; i < row; i++)
+        {
+            element *= 2;
+            element++;
+        }
+        element += column;
+        return element;
+    }
+
+    private static (int row, int column) FromElement(int element)
+    {
+        int i = 1;
+        while (true)
+        {
+            if (element - ElementNum(i, 1) >= 0)
+            {
+                i++;
+            }
+            else
+            {
+                i--;
+                break;
+            }
+        }
+        return (i, element - ElementNum(i, 1) + 1);
+    }
+}

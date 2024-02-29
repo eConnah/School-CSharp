@@ -19,7 +19,7 @@ internal class Program
         binaryTree = treeInput.Split(' ');
         children = childrenInput.Split(' ');
 
-//Find Index
+        //Find Index
         foreach (string item in children)
         {
             childrenElements.Add(Array.IndexOf(binaryTree, item));
@@ -28,11 +28,11 @@ internal class Program
         //
     }
 
-    private static int ElementNum(int row, int column)
+    private static int ToElement(int row, int column)
     {
         int element = 0;
 
-        for (int i = 1; i < row; i++)
+        for (int i = 0; i < row; i++)
         {
             element *= 2;
             element++;
@@ -43,10 +43,10 @@ internal class Program
 
     private static (int row, int column) FromElement(int element)
     {
-        int i = 1;
+        int i = 0;
         while (true)
         {
-            if (element - ElementNum(i, 1) >= 0)
+            if (element - ToElement(i, 0) >= 0)
             {
                 i++;
             }
@@ -56,6 +56,6 @@ internal class Program
                 break;
             }
         }
-        return (i, element - ElementNum(i, 1) + 1);
+        return (i, element - ToElement(i, 0));
     }
 }

@@ -6,7 +6,7 @@ internal class Program
     private static int treeLength = 0;
     private static void Main(string[] args)
     {
-        //Declare Variables
+        //Declare and initilise Variables
         string treeInput;
         string childrenInput;
         string[] binaryTree;
@@ -14,7 +14,7 @@ internal class Program
         List<int> childrenElements = new();
         int row = 0;
         int column = 0;
-        bool isRoot;
+        bool isRoot = false;
 
         //Set variables
         Console.Write("Please enter your binary tree: ");
@@ -25,13 +25,14 @@ internal class Program
         children = childrenInput.Split(' ');
         treeLength = binaryTree.Length;
 
-        //Find Index
+        //Add Children Index
         foreach (string item in children)
         {
             childrenElements.Add(Array.IndexOf(binaryTree, item));
         }
 
-        while (true)
+        //Find Root
+        while (!isRoot)
         {
             switch (InTree(row, column, childrenElements[0], childrenElements[1]))
             {
@@ -39,7 +40,7 @@ internal class Program
                     column++;
                     break;
                 case 1:
-
+                    isRoot = true;
                     break;
                 case 2:
                     row++;
@@ -47,6 +48,8 @@ internal class Program
             }
         }
 
+        //Print Root
+        Console.WriteLine($"The ansestor of {childrenInput} is {binaryTree[ToElement(row, column)]}");
 
     }
 
@@ -100,9 +103,10 @@ internal class Program
             {
                 i++;
             }
-            if (column < Math.Pow(2, row))
+            if (column < 0.5 * Math.Pow(2, row))
             {
                 element++;
+                column++;
             }
             else
             {

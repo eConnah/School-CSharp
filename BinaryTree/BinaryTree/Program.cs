@@ -32,7 +32,9 @@ class Program
             }
         }
 
-        Console.WriteLine();
+        //Test
+        FixNulls(tree);
+        Console.WriteLine($"The common ancestor of {children[0]} and {children[1]} is {FindCommonAncestor(tree, char.Parse(children[0]), char.Parse(children [1])).data}");
     }
 
     public static void FillTree(BNode tree, char input, List<int> path, int index)
@@ -71,21 +73,19 @@ class Program
         int ones = 0;
         int twoPower = 10;
         double difference;
-        double powerOne = 0;
         double powerTwo;
 
         //Path Generation
-        while (index >= powerOne)
+        while (index >= (Math.Pow(2, ones) - 1))
         {
             ones++;
-            powerOne = Math.Pow(2, ones) - 1;
         }
         ones--;
         for (int i = 0; i < ones; i++)
         {
             path.Add(1);
         }
-        difference = index - powerOne;
+        difference = index - (Math.Pow(2, ones) - 1);
         while (twoPower > 0)
         {
             powerTwo = Math.Pow(2, twoPower);
@@ -106,17 +106,42 @@ class Program
         return path;
     }
 
-    public static void RecursiveInorder(BNode root)
+    public static void FixNulls(BNode root)
     {
+        if (root.left != null && root.left.data == ' ')
+        {
+            root.left = null;
+        }
+        if (root.right != null && root.right.data == ' ')
+        {
+            root.right = null;
+        }
         if (root.left != null)
         {
-            RecursiveInorder(root.left);
+            FixNulls(root.left);
         }
-        Console.Write(root.data.ToString());
         if (root.right != null)
         {
-            RecursiveInorder(root.right);
+            FixNulls(root.right);
         }
+    }
+
+    public static BNode? FindCommonAncestor(BNode? root, char node1, char node2)
+    {
+        if (root == null || root.data == node1 || root.data == node2)
+        {
+            return root;
+        }
+
+        BNode? left = FindCommonAncestor(root.left, node1, node2);
+        BNode? right = FindCommonAncestor(root.right, node1, node2);
+
+        if (left != null  && right != null)
+        {
+            return root;
+        }
+
+        return left ?? right;
     }
 }
 class BNode

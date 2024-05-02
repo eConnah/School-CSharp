@@ -34,7 +34,7 @@ class Program
 
         //Test
         FixNulls(tree);
-        Console.WriteLine($"The common ancestor of {children[0]} and {children[1]} is {FindCommonAncestor(tree, char.Parse(children[0]), char.Parse(children [1])).data}");
+        Console.WriteLine($"The common ancestor of {children[0]} and {children[1]} is {FindCommonAncestor(tree, char.Parse(children[0]), char.Parse(children[1])).data}.");
     }
 
     public static void FillTree(BNode tree, char input, List<int> path, int index)

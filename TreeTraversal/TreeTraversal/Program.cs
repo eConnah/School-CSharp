@@ -4,26 +4,29 @@ using System.Reflection.Metadata;
 
 internal class Program
 {
-    public static bool stored = false;
     private static void Main(string[] args)
     {
-        BNode bTree = new(5);
-        TreeAdd(6, bTree);
-        TreeAdd(83, bTree);
-        TreeAdd(34, bTree);
-        TreeAdd(2, bTree);
-        TreeAdd(3, bTree);
-        TreeAdd(4, bTree);
-        PostOrder(bTree);
+        Tree.Node bTree = new(5);
+        Tree.Add(6, bTree);
+        Tree.Add(83, bTree);
+        Tree.Add(34, bTree);
+        Tree.Add(2, bTree);
+        Tree.Add(3, bTree);
+        Tree.Add(4, bTree);
+        Tree.PostOrder(bTree);
     }
+}
 
-    public static void TreeAdd(int newData, BNode tree)
+internal class Tree
+{
+    public static bool stored = false;
+    public static void Add(int newData, Node tree)
     {
         stored = false;
         TreeAddData(newData, tree);
     }
 
-    public static void TreeAddData(int newData, BNode tree)
+    public static void TreeAddData(int newData, Node tree)
     {
         while (!stored)
         {
@@ -58,7 +61,7 @@ internal class Program
         }
     }
 
-    public static void InOrder(BNode tree)
+    public static void InOrder(Node tree)
     {
         if (tree.left != null)
         {
@@ -71,7 +74,7 @@ internal class Program
         }
     }
 
-    public static void PreOrder(BNode tree)
+    public static void PreOrder(Node tree)
     {
         Console.WriteLine(tree.data);
         if (tree.left != null)
@@ -84,7 +87,7 @@ internal class Program
         }
     }
 
-    public static void PostOrder(BNode tree)
+    public static void PostOrder(Node tree)
     {
         if (tree.left != null)
         {
@@ -96,14 +99,14 @@ internal class Program
         }
         Console.WriteLine(tree.data);
     }
-}
 
-class BNode
-{
-    public BNode? left, right;
-    public int data;
-    public BNode(int data)
+    public class Node
     {
-        this.data = data;
+        public Node? left, right;
+        public int data;
+        public Node(int data)
+        {
+            this.data = data;
+        }
     }
 }

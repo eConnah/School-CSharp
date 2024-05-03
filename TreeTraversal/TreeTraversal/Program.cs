@@ -1,160 +1,109 @@
-﻿internal class Program
+﻿using System.ComponentModel;
+using System.Net.Http.Headers;
+using System.Reflection.Metadata;
+
+internal class Program
 {
+    public static bool stored = false;
     private static void Main(string[] args)
     {
-        BinaryTree myTree = new();
-        myTree.AddNode(5);
-        myTree.AddNode(6);
-        myTree.AddNode(83);
-        myTree.AddNode(34);
-        myTree.AddNode(2);
-        myTree.AddNode(3);
-        myTree.AddNode(4);
-        myTree.PostOrder();
-    }
-}
-
-class Node
-{
-    public int left
-    {
-        get; set;
-    }
-    public int right
-    {
-        get; set;
-    }
-    public int data
-    {
-        get; set;
-    }
-    public Node(int l, int d, int r)
-    {
-        left = l;
-        right = r;
-        data = d;
-    }
-}
-
-/*Binary Tree object making use of a dictionary of key (integer) and value (Node objects)
- * Constructor method provided - no parameters needed
- * Public method to Add Nodes to the tree - no return value
- * Overriding the method ToString so that when the object is printed to the console it appears
- * in a friendly way.
- */
-class BinaryTree
-{
-    Dictionary<int, Node> tree;
-    int currentIndex;
-    public BinaryTree()
-    {
-        tree = new Dictionary<int, Node>();
-        currentIndex = 0;
+        BNode bTree = new(5);
+        TreeAdd(6, bTree);
+        TreeAdd(83, bTree);
+        TreeAdd(34, bTree);
+        TreeAdd(2, bTree);
+        TreeAdd(3, bTree);
+        TreeAdd(4, bTree);
+        PostOrder(bTree);
     }
 
-    public void AddNode(int data)
+    public static void TreeAdd(int newData, BNode tree)
     {
-        if (currentIndex == 0)
+        stored = false;
+        TreeAddData(newData, tree);
+    }
+
+    public static void TreeAddData(int newData, BNode tree)
+    {
+        while (!stored)
         {
-            tree.Add(0, new Node(-1, data, -1));
-        }
-        else
-        {
-            tree.Add(currentIndex, new Node(-1, data, -1));
-
-            /*tempIndex variable used to keep track of position as we traverse the tree to find 
-             * the new items place
-             */
-            int tempIndex = 0;
-
-            /*Boolean flag variable used to control the While loop, changes to true when the
-             * newly added node is in a leaf position
-             */
-            bool positionFound = false;
-            while (!positionFound)
+            if (newData < tree.data)
             {
-                if (tree[currentIndex].data < tree[tempIndex].data)
+                if (tree.left == null)
                 {
-                    if (tree[tempIndex].left == -1)
-                    {
-                        tree[tempIndex].left = currentIndex;
-                        positionFound = true;
-                    }
-                    else
-                    {
-                        tempIndex = tree[tempIndex].left;
-                    }
+                    tree.left = new(newData);
+                    stored = true;
                 }
                 else
                 {
-                    if (tree[currentIndex].data > tree[tempIndex].data)
-                    {
-                        if (tree[tempIndex].right == -1)
-                        {
-                            tree[tempIndex].right = currentIndex;
-                            positionFound = true;
-                        }
-                        else
-                        {
-                            tempIndex = tree[tempIndex].right;
-                        }
-                    }
+                    TreeAddData(newData, tree.left);
                 }
-
+            }
+            else if (newData > tree.data)
+            {
+                if (tree.right == null)
+                {
+                    tree.right = new(newData);
+                    stored = true;
+                }
+                else
+                {
+                    TreeAddData(newData, tree.right);
+                }
+            }
+            else
+            {
+                stored = true;
             }
         }
-        currentIndex++;
     }
 
-    /*Overrides the existing toString method provided 
-     * by the Object class (all classes inherit from the object class).
-     */
-    public override string ToString()
+    public static void InOrder(BNode tree)
     {
-        string stringToReturn = "";
-        foreach (KeyValuePair<int, Node> pair in tree)
+        if (tree.left != null)
         {
-            stringToReturn = stringToReturn + $"Key = {pair.Key} Left: {pair.Value.left} Data: {pair.Value.data} Right: {pair.Value.right}\n";
+            InOrder(tree.left);
         }
-        return stringToReturn;
-    }
-
-    public void InOrder(int index = 0)
-    {
-        if (tree[index].left != -1)
+        Console.WriteLine(tree.data);
+        if (tree.right != null)
         {
-            InOrder(tree[index].left);
-        }
-        Console.WriteLine(tree[index].data);
-        if (tree[index].right != -1)
-        {
-            InOrder(tree[index].right);   
+            InOrder(tree.right);
         }
     }
 
-    public void PreOrder(int index = 0)
+    public static void PreOrder(BNode tree)
     {
-        Console.WriteLine(tree[index].data);
-        if (tree[index].left != -1)
+        Console.WriteLine(tree.data);
+        if (tree.left != null)
         {
-            PreOrder(tree[index].left);
+            PreOrder(tree.left);
         }
-        if (tree[index].right != -1)
+        if (tree.right != null)
         {
-            PreOrder(tree[index].right);   
+            PreOrder(tree.right);
         }
     }
 
-    public void PostOrder(int index = 0)
+    public static void PostOrder(BNode tree)
     {
-        if (tree[index].left != -1)
+        if (tree.left != null)
         {
-            PostOrder(tree[index].left);
+            PostOrder(tree.left);
         }
-        if (tree[index].right != -1)
+        if (tree.right != null)
         {
-            PostOrder(tree[index].right);   
+            PostOrder(tree.right);
         }
-        Console.WriteLine(tree[index].data);
+        Console.WriteLine(tree.data);
+    }
+}
+
+class BNode
+{
+    public BNode? left, right;
+    public int data;
+    public BNode(int data)
+    {
+        this.data = data;
     }
 }

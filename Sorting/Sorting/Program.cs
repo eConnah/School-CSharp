@@ -2,9 +2,13 @@
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        string name = "Sophia";
         List<string> starter = new() { "Ava", "Ethan", "Olivia", "Noah", "Emma", "Liam", "Aria", "Benjamin", "Sophia", "Jacob", "Mia", "William", "Isabella"};
-        Console.WriteLine(BinarySearch(starter, "Mia"));
+        List<string> sorted = BubbleSort(starter);
+        Console.Clear();
+        Console.WriteLine($"Binary Search found {BinarySearch(sorted, name)}.");
+        Console.WriteLine($"Linear Search found {LinearSearch(sorted, name)}.");
+        Console.WriteLine($"The correct value is {sorted.IndexOf(name)}.");
     }
 
     private static List<string> BubbleSort(List<string> items)
@@ -39,25 +43,25 @@
 
     private static int BinarySearch(List<string> items, string item)
     {
-        int midPoint = (items.Count / 2) - 1;
-        int difference = (midPoint + 1) / 2;
-        int i = midPoint;
-        while (true)
+        int left = 0;
+        int right = items.Count - 1;
+        while (left <= right)
         {
-            if (string.Compare(items[i], item) == 0)
+            int index = left + (right - left) / 2;
+            int comparison = items[index].CompareTo(item);
+            if (comparison == 0)
             {
-                return i;
+                return index;
             }
-            else if (string.Compare(items[i], item) < 0)
+            else if (comparison < 0)
             {
-                i = midPoint + difference;
-                difference /= 2;
+                left = index + 1;
             }
             else
             {
-                i = midPoint - difference;
-                difference /= 2;
+                right = index - 1;
             }
         }
+        return -1;
     }
 }

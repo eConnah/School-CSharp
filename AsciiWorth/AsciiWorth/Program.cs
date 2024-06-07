@@ -4,11 +4,24 @@
     {
         Console.Write("Please enter your word: ");
         string word = Console.ReadLine();
-        int worth = 0;
-        foreach (char item in word)
+        int worth;
+        List<string> words = new();
+        words = word.Split(' ').ToList();
+        List<int> worths = new();
+        foreach (string itemW in words)
         {
-            worth += Convert.ToInt32(item);
+            worth = 0;
+            foreach (char itemC in itemW)
+            {
+                worth += Convert.ToInt32(itemC);
+            }
+            worths.Add(worth);
         }
-        Console.WriteLine($"The value of your word is {worth}.");
+
+        foreach (int item in worths)
+        {
+            Console.Write($"{item} ");
+        }
+        Console.WriteLine($"The total value is {worths.Sum()}");
     }
 }

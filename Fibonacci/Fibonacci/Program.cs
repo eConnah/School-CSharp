@@ -13,8 +13,8 @@ internal class Program
         //Store variables
         Console.WriteLine("How many terms would you like: ");
         tTerm = Convert.ToInt32(Console.ReadLine());
-        cTerm = 0;
-        numOne = 0;
+        cTerm = 1;
+        numOne = 1;
         numTwo = 1;
 
         //Loop
@@ -22,18 +22,11 @@ internal class Program
         {
             if (cTerm != tTerm + 1){
                Console.WriteLine($"Term {cTerm} = {numOne}");
-                numOne = numOne + numTwo; 
+                (numOne, numTwo) = (numOne + numTwo, numOne);
             } else {
                break; 
             }
-            cTerm = cTerm + 1;
-            if (cTerm != tTerm + 1){
-               Console.WriteLine($"Term {cTerm} = {numTwo}");
-                numTwo = numOne + numTwo; 
-            } else {
-               break; 
-            }
-            cTerm = cTerm + 1;
+            cTerm++;
         } while (true);
     }
 }

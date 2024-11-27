@@ -10,11 +10,11 @@
         Console.Write("Please enter your string: ");
         userInput = Console.ReadLine();
 
-        charValue = Convert.ToInt32(userInput[0]);
+        charValue = userInput[0];
         isEven = charValue % 2 == 0;
         for (int i = 1; i < userInput.Length; i++)
         {
-            charValue = Convert.ToInt32(userInput[i]);
+            charValue = userInput[i];
             if(isEven == (charValue % 2 == 0))
             {
                 isEncoded = false;

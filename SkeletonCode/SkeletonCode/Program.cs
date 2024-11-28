@@ -51,11 +51,20 @@ namespace TargetClearCS
             bool GameOver = false;
             string UserInput;
             List<string> UserInputInRPN;
+            bool powerUpUsed = false;
             while (!GameOver)
             {
+                PowerUp:
                 DisplayState(Targets, NumbersAllowed, Score);
                 Console.Write("Enter an expression: ");
                 UserInput = Console.ReadLine();
+                if (UserInput == "r" && !powerUpUsed)
+                {
+                    NumbersAllowed = new();
+                    NumbersAllowed = FillNumbers(NumbersAllowed, TrainingGame, MaxNumber);
+                    powerUpUsed = true;
+                    goto PowerUp;
+                }
                 Console.WriteLine();
                 if (CheckIfUserInputValid(UserInput))
                 {

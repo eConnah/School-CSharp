@@ -17,6 +17,7 @@ namespace TargetClearCS
 
         static void Main(string[] args)
         {
+            Restart:
             List<int> NumbersAllowed = new List<int>();
             List<int> Targets;
             int MaxNumberOfTargets = 20;
@@ -26,26 +27,44 @@ namespace TargetClearCS
             Console.Write("Enter y to play the training game, anything else to play a random game: ");
             string Choice = Console.ReadLine().ToLower();
             Console.WriteLine();
+            int spaces;
+            int winCondition;
             if (Choice == "y")
             {
                 MaxNumber = 1000;
                 MaxTarget = 1000;
                 TrainingGame = true;
                 Targets = new List<int> { -1, -1, -1, -1, -1, 23, 9, 140, 82, 121, 34, 45, 68, 75, 34, 23, 119, 43, 23, 119 };
+                winCondition = 1000;
             }
-            else
+            else if (Choice == "e")
             {
                 MaxNumber = 10;
                 MaxTarget = 50;
                 TrainingGame = false;
-                Targets = CreateTargets(MaxNumberOfTargets, MaxTarget);
+                spaces = 10;
+                Targets = CreateTargets(MaxNumberOfTargets, MaxTarget, spaces);
+                winCondition = 5;
+            }
+            else if (Choice == "h")
+            {
+                MaxNumber = 10;
+                MaxTarget = 50;
+                TrainingGame = false;
+                spaces = 5;
+                Targets = CreateTargets(MaxNumberOfTargets, MaxTarget, spaces);
+                winCondition = 20;
+            }
+            else
+            {
+                goto Restart;
             }
             NumbersAllowed = FillNumbers(NumbersAllowed, TrainingGame, MaxNumber);
-            PlayGame(Targets, NumbersAllowed, TrainingGame, MaxTarget, MaxNumber);
+            PlayGame(Targets, NumbersAllowed, TrainingGame, MaxTarget, MaxNumber, winCondition);
             Console.ReadLine();
         }
         
-        static void PlayGame(List<int> Targets, List<int> NumbersAllowed, bool TrainingGame, int MaxTarget, int MaxNumber)
+        static void PlayGame(List<int> Targets, List<int> NumbersAllowed, bool TrainingGame, int MaxTarget, int MaxNumber, int winCondition)
         {
             int Score = 0;
             bool GameOver = false;
@@ -79,8 +98,14 @@ namespace TargetClearCS
                     }
                 }
                 Score--;
+                if (Score >= winCondition)
+                {
+                    Console.WriteLine("Congratulations you win.");
+                    GameOver = true;
+                }
                 if (Targets[0] != -1)
                 {
+                    Console.WriteLine("Game over!");
                     GameOver = true;
                 }
                 else
@@ -88,7 +113,6 @@ namespace TargetClearCS
                     UpdateTargets(Targets, TrainingGame, MaxTarget);
                 }
             }
-            Console.WriteLine("Game over!");
             DisplayScore(Score);
         }
         
@@ -354,10 +378,10 @@ namespace TargetClearCS
             return RGen.Next(MaxNumber) + 1;
         }
         
-        static List<int> CreateTargets(int SizeOfTargets, int MaxTarget)
+        static List<int> CreateTargets(int SizeOfTargets, int MaxTarget, int spaces)
         {
             List<int> Targets = new List<int>();
-            for (int Count = 1; Count <= 5; Count++)
+            for (int Count = 1; Count <= spaces; Count++)
             {
                 Targets.Add(-1);
             }
